@@ -23,6 +23,7 @@ solutions :: Map.Map Int (IO ())
 solutions =
     Map.fromList
         [ (1, aoc 1 day01)
+        , (2, aoc 2 day02)
         ]
 
 getArg :: IO (Maybe Int)
