@@ -4,6 +4,7 @@
 module Main where
 
 import AOC
+import Control.Monad ((<=<))
 import qualified Data.Map as Map
 import System.Environment (getArgs)
 import Text.Printf (printf)
@@ -11,11 +12,11 @@ import Text.Printf (printf)
 aoc :: (Show b, Show c) => Int -> Solution a b c -> IO ()
 aoc n Solution{..} = readFile filename >>= runSolution
   where
-    filename = "data/" <> (printf "%02d" n) <> ".txt"
+    filename = "data/" <> printf "%02d" n <> ".txt"
     runSolution input = case getResults input of
         Nothing -> putStrLn "bad input"
         Just (x, y) -> printResult x *> printResult y
-    getResults = ((\i -> Just (part1 i, part2 i)) =<<) . parse
+    getResults = (\i -> Just (part1 i, part2 i)) <=< parse
     printResult :: Show a => Maybe a -> IO ()
     printResult = putStrLn . maybe "something went wrong" show
 
