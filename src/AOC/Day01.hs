@@ -12,7 +12,7 @@ day01 =
         }
 
 countIncreasing :: [Int] -> Int
-countIncreasing xs = length . filter (True ==) . zipWith (<) xs $ drop 1 xs
+countIncreasing xs = length . filter id . zipWith (<) xs $ drop 1 xs
 
 tripleSums :: [Int] -> [Int]
 tripleSums xs = zipWith3 (\x y z -> x + y + z) xs (drop 1 xs) (drop 2 xs)
