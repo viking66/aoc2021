@@ -27,7 +27,7 @@ solutions =
         , (2, aoc 2 day02)
         , (3, aoc 3 day03)
         , (4, aoc 4 day04)
-        -- , (5, aoc 5 day05)
+        , (5, aoc 5 day05)
         -- , (6, aoc 6 day06)
         -- , (7, aoc 7 day07)
         -- , (8, aoc 8 day08)
