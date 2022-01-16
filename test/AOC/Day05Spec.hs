@@ -6,10 +6,10 @@ import Test.Hspec
 
 spec :: Spec
 spec = do
-    describe "day04 part1" $ do
+    describe "day05 part1" $ do
         it "vertical and horizontal lines" $ do
             go1 input `shouldBe` Just 5
-    describe "day04 part2" $ do
+    describe "day05 part2" $ do
         it "vertical, horizontal, and diagonal lines" $ do
             go2 input `shouldBe` Just 12
 
